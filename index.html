@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateTip(billAmount, serviceQuality, numPeople) {
+    let tipPerPerson = (billAmount * (serviceQuality / 100)) / numPeople;
+    return tipPerPerson;
+}
+
+// Test Case 1
+let bill1 = 500;
+let serviceQuality1 = 5;
+let numPeople1 = 2;
+let expectedTip1 = 12.5;
+
+let tip1 = calculateTip(bill1, serviceQuality1, numPeople1);
+console.log(`Test Case 1 - Expected Tip: ${expectedTip1}, Calculated Tip: ${tip1}`);
+
+// Test Case 2
+let bill2 = 1000;
+let serviceQuality2 = 3;
+let numPeople2 = 5;
+let expectedTip2 = 6;
+
+let tip2 = calculateTip(bill2, serviceQuality2, numPeople2);
+console.log(`Test Case 2 - Expected Tip: ${expectedTip2}, Calculated Tip: ${tip2}`);
+
+    </script>
+</body>
+</html>
